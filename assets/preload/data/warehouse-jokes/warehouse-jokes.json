@@ -42,15 +42,15 @@
             }
         ],
         "player2": "bf",
-        "song": "Warehouse",
+        "song": "Warehouse-Jokes",
         "stage": "stage",
         "validScore": true,
         "sections": 0,
         "needsVoices": false,
         "bpm": 160,
         "speed": 1.7,
-		"waresongs":["Warm Up","Spooky Dance","Go Pico Go","Stay Fresh","Break Hearts"],
-		"warechars":["gf","spooky","pico","dad","senpai-angry"]
+		"waresongs":["Tankman Is Stuttering","Orange Approved"],
+		"warechars":["dad","pico"]
 		
     }
 }

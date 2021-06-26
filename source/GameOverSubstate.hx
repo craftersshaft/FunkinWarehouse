@@ -42,6 +42,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		Conductor.changeBPM(100);
 		var yourScore:String = "YOUR SCORE" + score;
 		scoreText = new Alphabet(bf.x, bf.y - 60, yourScore, true, false);
+		trace(yourScore);
 		//add(scoreText);
 
 		// FlxG.camera.followLerp = 1;
@@ -109,7 +110,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
 				{
-					LoadingState.loadAndSwitchState(new PlayState());
+					FlxG.switchState(new FreeplayState());
 				});
 			});
 		}

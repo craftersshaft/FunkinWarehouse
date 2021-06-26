@@ -7,5 +7,7 @@ CODE MAY BE MESSY WITH UNUSED FEATURES! STILL NEED TO ADD MORE SONGS
 if you want your mod added as a track, let me know.
 thanks to DiamondBrickZ for making the chart's intro music!
 
-Current tracks:
-by Kawai Sprite: Tutorial, Spookeez, Ugh, Fresh, Roses
+# Current tracks
+
+Normal: 
+Tutorial, Spookeez, Ugh, Fresh, Roses by Kawai Sprite
