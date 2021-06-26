@@ -10,4 +10,4 @@ thanks to DiamondBrickZ for making the chart's intro music!
 # Current tracks
 
 Normal: 
-Tutorial, Spookeez, Ugh, Fresh, Roses by Kawai Sprite
+Tutorial, Spookeez, Ugh, Fresh, Roses, Pico by Kawai Sprite
