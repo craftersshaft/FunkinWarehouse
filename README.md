@@ -10,4 +10,12 @@ thanks to DiamondBrickZ for making the chart's intro music!
 # Current tracks
 
 Normal: 
-Tutorial, Spookeez, Ugh, Fresh, Roses, Pico by Kawai Sprite
+Tutorial, Spookeez, Fresh, Roses, Pico by Kawai Sprite and assets from the main devs of fnf
+
+Mods:
+Garcello by Rageminer and Atsuover
+
+Jokes:
+Pico (Orange Cover) by Annoying Orange
+Get Milfy inspired by Get Lucky by Daft Punk
+Ugh by Kawai Sprite

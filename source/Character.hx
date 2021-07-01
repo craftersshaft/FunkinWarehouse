@@ -505,6 +505,23 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+			case 'garcello':
+				// GARCELLO ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('garcello_assets');
+				frames = tex;
+				animation.addByPrefix('idle', 'garcello idle dance', 24);
+				animation.addByPrefix('singUP', 'garcello Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'garcello Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'garcello Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'garcello Sing Note LEFT', 24);
+
+				addOffset('idle');
+				addOffset("singUP", 0, 0);
+				addOffset("singRIGHT", 0, 0);
+				addOffset("singLEFT", 0, 0);
+				addOffset("singDOWN", 0, 0);
+
+				playAnim('idle');
 		}
 
 		dance();
