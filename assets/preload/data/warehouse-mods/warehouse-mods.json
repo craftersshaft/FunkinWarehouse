@@ -31,26 +31,18 @@
                 "bpm": 160,
                 "changeBPM": false,
                 "mustHitSection": true
-            }, {
-                "lengthInSteps": 16,
-                "altAnim": false,
-                "typeOfSection": 0,
-                "sectionNotes": [],
-                "bpm": 160,
-                "changeBPM": false,
-                "mustHitSection": true
             }
         ],
         "player2": "bf",
-        "song": "Warehouse-Jokes",
+        "song": "Warehouse-Mods",
         "stage": "stage",
         "validScore": true,
         "sections": 0,
         "needsVoices": false,
         "bpm": 160,
         "speed": 2,
-		"waresongs":["Tankman Is Stuttering","Orange Approved"],
-		"warechars":["dad","pico"]
+		"waresongs":["Smoke Em Out"],
+		"warechars":["garcello"]
 		
     }
 }

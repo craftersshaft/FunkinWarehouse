@@ -13,7 +13,7 @@ Normal:
 Tutorial, Spookeez, Fresh, Roses, Pico by Kawai Sprite and assets from the main devs of fnf
 
 Mods:
-Garcello by Rageminer and Atsuover
+Nerves from Garcello by Rageminer and Atsuover
 
 Jokes:
 Pico (Orange Cover) by Annoying Orange

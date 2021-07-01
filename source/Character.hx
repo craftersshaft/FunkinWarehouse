@@ -507,7 +507,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 			case 'garcello':
 				// GARCELLO ANIMATION LOADING CODE
-				tex = Paths.getSparrowAtlas('garcello_assets');
+				tex = Paths.getSparrowAtlas('characters/garcello_assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'garcello idle dance', 24);
 				animation.addByPrefix('singUP', 'garcello Sing Note UP', 24);
