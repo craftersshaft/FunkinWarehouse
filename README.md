@@ -1,4 +1,6 @@
 # Friday Night Funkin' Warehouse Mode
+![GitHub all releases](https://img.shields.io/github/downloads/craftersshaft/FunkinWarehouse/total)
+
 modchart turned into a full-ass track mod. uses [Kade Engine](https://github.com/KadeDev/Kade-Engine) as a base.
 
 CODE MAY BE MESSY WITH UNUSED FEATURES! STILL NEED TO ADD MORE SONGS

@@ -6,7 +6,7 @@ import flixel.animation.FlxBaseAnimation;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxRainbowEffect;
-
+import openfl.utils.Assets;
 using StringTools;
 
 class Character extends FlxSprite
@@ -30,6 +30,7 @@ class Character extends FlxSprite
 		animOffsets = new Map<String, Array<Dynamic>>();
 		curCharacter = character;
 		this.isPlayer = isPlayer;
+		rgboyfriendHat.color = 0xFF2D32;
 		rgboyfriendFinal = new FlxEffectSprite(rgboyfriendHat, [rgboyfriend]);
 
 		var tex:FlxAtlasFrames;
@@ -278,6 +279,11 @@ class Character extends FlxSprite
 				frames = tex;
 
 				trace(tex.frames.length);
+				if (Paths.txt("defaultColors") != null){
+				var deefColors = Assets.getText(Paths.txt("defaultColors")).split('\n');
+				rgboyfriendHat.color = Std.parseInt(deefColors[0]);
+				stampBoif();
+				}
 
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -552,7 +558,7 @@ class Character extends FlxSprite
 	public function stampBoif()
 	{
 				trace('stamp!');
-				stamp(rgboyfriendFinal);
+				stamp(rgboyfriendHat);
 	
 	}
 
