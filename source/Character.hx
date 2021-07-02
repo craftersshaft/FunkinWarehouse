@@ -19,6 +19,7 @@ class Character extends FlxSprite
 
 	var rgboyfriend = new FlxRainbowEffect();
 	var rgboyfriendHat = new FlxSprite().loadGraphic(Paths.image('characters/BOYFRIEND_HATONLY', 'shared'));
+	var rgboyfriendSkin = new FlxSprite().loadGraphic(Paths.image('characters/BOYFRIEND_SKINONLY', 'shared'));
 	var rgboyfriendFinal:FlxEffectSprite;
 
 	public var holdTimer:Float = 0;
@@ -31,6 +32,7 @@ class Character extends FlxSprite
 		curCharacter = character;
 		this.isPlayer = isPlayer;
 		rgboyfriendHat.color = 0xFF2D32;
+		rgboyfriendSkin.color = 0xFDDFBD;
 		rgboyfriendFinal = new FlxEffectSprite(rgboyfriendHat, [rgboyfriend]);
 
 		var tex:FlxAtlasFrames;
@@ -282,8 +284,10 @@ class Character extends FlxSprite
 				if (Paths.txt("defaultColors") != null){
 				var deefColors = Assets.getText(Paths.txt("defaultColors")).split('\n');
 				rgboyfriendHat.color = Std.parseInt(deefColors[0]);
+				rgboyfriendSkin.color = Std.parseInt(deefColors[1]);
+				if (FlxG.save.data.bfcolored == true){
 				stampBoif();
-				}
+				}}
 
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -559,6 +563,7 @@ class Character extends FlxSprite
 	{
 				trace('stamp!');
 				stamp(rgboyfriendHat);
+				stamp(rgboyfriendSkin);			
 	
 	}
 

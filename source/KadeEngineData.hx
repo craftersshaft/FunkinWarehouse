@@ -26,8 +26,8 @@ class KadeEngineData
 		if (FlxG.save.data.fps == null)
 			FlxG.save.data.fps = false;
 			
-		if (FlxG.save.data.bfhatcolor == null)
-			FlxG.save.data.bfhatcolor = 0xFF2D32;		
+		if (FlxG.save.data.bfcolored == null)
+			FlxG.save.data.bfcolored = true;		
 
 		if (FlxG.save.data.changedHit == null)
 		{
