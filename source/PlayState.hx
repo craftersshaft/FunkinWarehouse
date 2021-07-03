@@ -2440,7 +2440,7 @@ class PlayState extends MusicBeatState
 
 			vocals.stop();
 			FlxG.sound.music.stop();
-
+			Highscore.saveScore(PlayState.SONG.song, Math.round(wareScore), storyDifficulty);
 			openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, wareScore));
 
 			#if windows
