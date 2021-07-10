@@ -49,8 +49,8 @@
         "needsVoices": false,
         "bpm": 160,
         "speed": 2,
-		"waresongs":["Tankman Is Stuttering","Orange Approved"],
-		"warechars":["dad","pico"]
+		"waresongs":["Tankman Is Stuttering","Orange Approved","Get Milfy"],
+		"warechars":["dad","pico","mom"]
 		
     }
 }
