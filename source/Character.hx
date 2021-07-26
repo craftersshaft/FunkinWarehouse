@@ -281,8 +281,8 @@ class Character extends FlxSprite
 				frames = tex;
 
 				trace(tex.frames.length);
-				if (Paths.txt("defaultColors") != null){
-				var deefColors = Assets.getText(Paths.txt("defaultColors")).split('\n');
+				if (Paths.txt("data/defaultColors") != null){
+				var deefColors = Assets.getText(Paths.txt("data/defaultColors")).split('\n');
 				rgboyfriendHat.color = Std.parseInt(deefColors[0]);
 				rgboyfriendSkin.color = Std.parseInt(deefColors[1]);
 				if (FlxG.save.data.bfcolored == true){
