@@ -386,8 +386,9 @@ class TitleState extends MusicBeatState
 				else
 					createCoolText(['In Partnership', 'with']);
 			case 7:
-				if (Main.watermarks)
+				if (Main.watermarks) {
 					addMoreText('KadeDeveloper');
+					ngSpr.visible = true; }
 				else
 				{
 					addMoreText('Newgrounds');
