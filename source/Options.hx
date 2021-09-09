@@ -7,7 +7,9 @@ import Controls.KeyboardScheme;
 import flixel.FlxG;
 import openfl.display.FPS;
 import openfl.Lib;
-
+#if web
+import js.html.Window;
+#end
 class OptionCategory
 {
 	private var _options:Array<Option> = new Array<Option>();
@@ -218,6 +220,49 @@ class DistractionsAndEffectsOption extends Option
 	private override function updateDisplay():String
 	{
 		return "Distractions " + (!FlxG.save.data.distractions ? "off" : "on");
+	}
+}
+
+class BFColoredOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+	public override function press():Bool
+	{
+		FlxG.save.data.bfcolored = !FlxG.save.data.bfcolored;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "BF Colored " + (!FlxG.save.data.bfcolored ? "off" : "on");
+	}
+}
+
+class BFColorsOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+	public override function press():Bool
+	{
+		#if web
+		FlxG.save.data.bfcolors[0] = js.Browser.window.prompt("Hat Color", "0xFF2D32");
+		FlxG.save.data.bfcolors[1] = js.Browser.window.prompt("Skin Color", "0xFDDFBD");
+		#end
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "BF Colors " + (FlxG.save.data.bfcolors[0]) + (FlxG.save.data.bfcolors[1]);
 	}
 }
 

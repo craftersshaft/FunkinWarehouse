@@ -28,7 +28,10 @@ class KadeEngineData
 			
 		if (FlxG.save.data.bfcolored == null)
 			FlxG.save.data.bfcolored = true;		
-
+		#if web
+		if (FlxG.save.data.bfcolors == null)
+			FlxG.save.data.bfcolors = ["0xFF2D32","0xFDDFBD"];		
+		#end
 		if (FlxG.save.data.changedHit == null)
 		{
 			FlxG.save.data.changedHitX = -1;

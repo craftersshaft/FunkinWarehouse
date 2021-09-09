@@ -48,6 +48,10 @@ class OptionsMenu extends MusicBeatState
 			new SongPositionOption("Show the songs current position (as a bar)"),
 			new CpuStrums("CPU's strumline lights up when a note hits it."),
 			#end
+			new BFColoredOption("Make Boyfriend use custom colors definable in the data folder"),
+			#if web
+			new BFColorsOption("Define your own colors here! (In hex code format!" + (FlxG.save.data.bfcolors[0]) + " " + (FlxG.save.data.bfcolors[1]) + ")"),
+			#end
 		]),
 		
 		new OptionCategory("Misc", [

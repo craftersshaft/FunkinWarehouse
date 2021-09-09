@@ -391,6 +391,7 @@ class TitleState extends MusicBeatState
 				else
 				{
 					addMoreText('Newgrounds');
+					addMoreText('HedgehogStew.today');
 					ngSpr.visible = true;
 				}
 			// credTextShit.text += '\nNewgrounds';

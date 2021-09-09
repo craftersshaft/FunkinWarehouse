@@ -281,12 +281,17 @@ class Character extends FlxSprite
 				frames = tex;
 
 				trace(tex.frames.length);
-				if (Paths.txt("data/defaultColors") != null){
-				var deefColors = Assets.getText(Paths.txt("data/defaultColors")).split('\n');
-				rgboyfriendHat.color = Std.parseInt(deefColors[0]);
-				rgboyfriendSkin.color = Std.parseInt(deefColors[1]);
 				if (FlxG.save.data.bfcolored == true){
-				stampBoif();
+					if (FlxG.save.data.bfcolors != null){
+					var beefColors = [FlxG.save.data.bfcolors[0], FlxG.save.data.bfcolors[1]];
+					rgboyfriendHat.color = Std.parseInt(beefColors[0]);
+					rgboyfriendSkin.color = Std.parseInt(beefColors[1]);
+					stampBoif();
+					} else if (Paths.txt("data/defaultColors") != null){
+					var deefColors = Assets.getText(Paths.txt("data/defaultColors")).split('\n');
+					rgboyfriendHat.color = Std.parseInt(deefColors[0]);
+					rgboyfriendSkin.color = Std.parseInt(deefColors[1]);
+					stampBoif();
 				}}
 
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);

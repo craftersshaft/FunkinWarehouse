@@ -62,6 +62,10 @@ class LoadingState extends MusicBeatState
 				checkLoadSong(getSongPath());
 				if (PlayState.SONG.needsVoices)
 					checkLoadSong(getVocalPath());
+				if (PlayState.SONG.waresongs != null)
+					for (i in 0...PlayState.SONG.waresongs.length) {
+					checkLoadSong("songs:assets/songs/"+PlayState.SONG.song.toLowerCase()+"/"+(i+1)+"/Inst.mp3");
+					};
 				trace("checking shared");
 				checkLibrary("shared");
 				trace("checking week6");
@@ -73,6 +77,7 @@ class LoadingState extends MusicBeatState
 	
 	function checkLoadSong(path:String)
 	{
+		trace("checking to load song " + path);
 		if (!Assets.cache.hasSound(path))
 		{
 			var library = Assets.getLibrary("songs");
