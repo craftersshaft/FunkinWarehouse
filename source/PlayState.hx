@@ -253,6 +253,7 @@ class PlayState extends MusicBeatState
 			bads = 0;
 			shits = 0;
 			goods = 0;
+			wareScore = 0;
 		}
 		misses = 0;
 
