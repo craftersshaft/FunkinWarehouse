@@ -5,6 +5,7 @@ import lime.app.Future;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSprite;
+import flixel.text.FlxText;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxTimer;
 
@@ -26,6 +27,8 @@ class LoadingState extends MusicBeatState
 	var logo:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft = false;
+	var filesloaded = 0;
+	var filetext:FlxText;
 	
 	function new(target:FlxState, stopMusic:Bool)
 	{
@@ -50,8 +53,11 @@ class LoadingState extends MusicBeatState
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = true;
+		filesloaded = 0;
+		filetext = new FlxText(0, 0, 0, "Files Loaded:");
 		add(gfDance);
 		add(logo);
+		add(filetext);
 		
 		initSongsManifest().onComplete
 		(
@@ -87,7 +93,7 @@ class LoadingState extends MusicBeatState
 			// @:privateAccess
 			// library.pathGroups.set(symbolPath, [library.__cacheBreak(symbolPath)]);
 			var callback = callbacks.add("song:" + path);
-			Assets.loadSound(path).onComplete(function (_) { callback(); });
+			Assets.loadSound(path).onComplete(function (_) { callback(); filesloaded++; filetext.text = ("Files Loaded: "+filesloaded);});
 		}
 	}
 	
@@ -101,8 +107,9 @@ class LoadingState extends MusicBeatState
 				throw "Missing library: " + library;
 			
 			var callback = callbacks.add("library:" + library);
-			Assets.loadLibrary(library).onComplete(function (_) { callback(); });
+			Assets.loadLibrary(library).onComplete(function (_) { callback(); filesloaded++; filetext.text = ("Files Loaded: "+filesloaded);});
 		}
+		
 	}
 	
 	override function beatHit()
